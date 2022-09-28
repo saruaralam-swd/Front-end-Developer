@@ -28,8 +28,8 @@ const Workouts = () => {
 
             <div className="col-lg-4 order-1 order-lg-2">
               <div className="mb-4 p-3 border text-white rounded">
-                <div className="d-flex">
-                  <img className="" src="./img/img.png" alt="img" />
+                <div className="d-flex align-items-center">
+                  <img className="me-4" src="./img/img.png" alt="img" />
                   <div>
                     <h4>Saraur Alam</h4>
                     <span>
@@ -39,7 +39,7 @@ const Workouts = () => {
                   </div>
                 </div>
 
-                <div className='d-flex justify-content-between bg-secondary mt-4 p-2 rounded'>
+                <div className='d-flex justify-content-between bg-secondary my-4 p-2 rounded'>
                   <div>
                     <p className='m-0'>62</p>
                     <p className='m-0'>Weight</p>
@@ -52,6 +52,15 @@ const Workouts = () => {
                     <p className='m-0'>29</p>
                     <p className='m-0'>Age</p>
                   </div>
+                </div>
+
+                <h6 className=''>Add A Break</h6>
+                <div className='d-flex justify-content-between   bg-secondary my-4 p-2 rounded'>
+                  <p className='time'>10s</p>
+                  <p className='time'>20s</p>
+                  <p className='time'>30s</p>
+                  <p className='time'>40s</p>
+                  <p className='time'>50s</p>
                 </div>
 
                 
