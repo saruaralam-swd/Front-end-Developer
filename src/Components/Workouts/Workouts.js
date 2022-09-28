@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Workouts.css'
 import Workout from '../Workout/Workout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocation } from '@fortawesome/free-solid-svg-icons'
 
 const Workouts = () => {
   const [workouts, SetCart] = useState([]);
@@ -14,9 +16,9 @@ const Workouts = () => {
   return (
     <div>
       <main>
-        <div className="container pb-4 pt-5">
+        <div className="container">
           <div className="row">
-            <div className="col-lg-8  order-2 order-lg-1">
+            <div className="col-lg-8 pt-5 order-2 order-lg-1">
               <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {
                   workouts.map(workout => <Workout key={workout.id} workout={workout}></Workout>)
@@ -24,12 +26,35 @@ const Workouts = () => {
               </div>
             </div>
 
-            <div className="col-lg-4  order-1 order-lg-2">
+            <div className="col-lg-4 order-1 order-lg-2">
               <div className="mb-4 p-3 border text-white rounded">
-                <h4>My image and some info about me</h4>
-              </div>
-              <div className="p-3 border text-white rounded mb-5">
-                some work
+                <div className="d-flex">
+                  <img className="" src="./img/img.png" alt="img" />
+                  <div>
+                    <h4>Saraur Alam</h4>
+                    <span>
+                      <FontAwesomeIcon icon={faLocation} className="me-3"></FontAwesomeIcon>
+                      jamalput, Bangladesh
+                    </span>
+                  </div>
+                </div>
+
+                <div className='d-flex justify-content-between bg-secondary mt-4 p-2 rounded'>
+                  <div>
+                    <p className='m-0'>62</p>
+                    <p className='m-0'>Weight</p>
+                  </div>
+                  <div>
+                    <p className='m-0'>5.5</p>
+                    <p className='m-0'>Height</p>
+                  </div>
+                  <div>
+                    <p className='m-0'>29</p>
+                    <p className='m-0'>Age</p>
+                  </div>
+                </div>
+
+                
               </div>
             </div>
           </div>
