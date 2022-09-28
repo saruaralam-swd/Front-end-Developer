@@ -13,6 +13,12 @@ const Workouts = () => {
       .then(data => SetCart(data));
   }, []);
 
+  
+
+  const addTime = (workout) => {
+    console.log(parseInt( workout.duration))
+  }
+
   return (
     <div>
       <main>
@@ -21,7 +27,7 @@ const Workouts = () => {
             <div className="col-lg-8 pt-5 order-2 order-lg-1">
               <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {
-                  workouts.map(workout => <Workout key={workout.id} workout={workout}></Workout>)
+                  workouts.map(workout => <Workout addTime={addTime} key={workout.id} workout={workout}></Workout>)
                 }
               </div>
             </div>
@@ -66,7 +72,7 @@ const Workouts = () => {
                 <h5>Exercise Details</h5>
                 <div className='d-flex justify-content-between  p-2 mb-3 bg-secondary'>
                   <h6>Exercise time</h6>
-                  <p>200 seconds</p>
+                  <p><span>0</span> seconds</p>
                 </div>
                 <div className='d-flex justify-content-between  p-2 bg-secondary'>
                   <h6>Break time</h6>

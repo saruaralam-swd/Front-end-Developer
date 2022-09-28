@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Workout = (props) => {
-  console.log(props.workout);
-  const {img, title, body, age, duration} = props.workout;
+const Workout = ({addTime, workout}) => {
+  const {img, title, body, age, duration} = workout;
 
   return (
     <div className="col">
@@ -13,7 +12,7 @@ const Workout = (props) => {
           <p className="text-muted">{body.slice(0, 40) + '...'}</p>
           <p className='card-text'>For age {age}</p>
           <p className='card-text'>Time required {duration}s</p>
-          <button className="btn btn-primary w-100">SELECT</button>
+          <button onClick={() => addTime(workout)} className="btn btn-primary w-100">SELECT</button>
         </div>
       </div>
     </div>
