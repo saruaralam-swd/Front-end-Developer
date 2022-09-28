@@ -53,15 +53,15 @@ const Workouts = () => {
 
                 <div className='d-flex justify-content-between bg-secondary my-4 p-2 rounded'>
                   <div>
-                    <p className='m-0'>62</p>
+                    <p className='m-0 fw-bold'>62kg</p>
                     <p className='m-0'>Weight</p>
                   </div>
                   <div>
-                    <p className='m-0'>5.5</p>
+                    <p className='m-0 fw-bold'>5.5</p>
                     <p className='m-0'>Height</p>
                   </div>
                   <div>
-                    <p className='m-0'>29</p>
+                    <p className='m-0 fw-bold'>29yrs</p>
                     <p className='m-0'>Age</p>
                   </div>
                 </div>
