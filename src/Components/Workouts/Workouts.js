@@ -54,8 +54,8 @@ const Workouts = () => {
                   </div>
                 </div>
 
-                <h6 className=''>Add A Break</h6>
-                <div className='d-flex justify-content-between   bg-secondary my-4 p-2 rounded'>
+                <h5 className=''>Add A Break</h5>
+                <div className='d-flex justify-content-between bg-secondary my-4 mb-5 p-2 rounded'>
                   <p className='time'>10s</p>
                   <p className='time'>20s</p>
                   <p className='time'>30s</p>
@@ -63,7 +63,16 @@ const Workouts = () => {
                   <p className='time'>50s</p>
                 </div>
 
-                
+                <h5>Exercise Details</h5>
+                <div className='d-flex justify-content-between  p-2 mb-3 bg-secondary'>
+                  <h6>Exercise time</h6>
+                  <p>200 seconds</p>
+                </div>
+                <div className='d-flex justify-content-between  p-2 bg-secondary'>
+                  <h6>Break time</h6>
+                  <p>10s seconds</p>
+                </div>
+
               </div>
             </div>
           </div>
