@@ -13,8 +13,6 @@ const Workouts = () => {
       .then(data => SetCart(data));
   }, []);
 
-  
-
   const addTime = (workout) => {
     console.log(parseInt( workout.duration))
   }
