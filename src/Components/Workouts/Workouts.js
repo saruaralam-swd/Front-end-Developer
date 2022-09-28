@@ -2,19 +2,27 @@ import React, { useEffect, useState } from 'react';
 import './Workouts.css'
 import Workout from '../Workout/Workout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocation } from '@fortawesome/free-solid-svg-icons'
+import { faLocation } from '@fortawesome/free-solid-svg-icons';
+import MyImg from '../../images/img.png'
 
 const Workouts = () => {
-  const [workouts, SetCart] = useState([]);
-
+  const [workouts, SetWorkouts] = useState([]);
   useEffect(() => {
     fetch('data.json')
-      .then(res => res.json())
-      .then(data => SetCart(data));
+    .then(res => res.json())
+    .then(data => SetWorkouts(data));
   }, []);
-
+  
+  let [time, SetTime] = useState(0)
   const addTime = (workout) => {
-    console.log(parseInt( workout.duration))
+    const duration = parseInt( workout.duration);
+    time = duration + time;
+    SetTime(time);
+  }
+
+  const [breakTime, SetBreakTime] = useState(0)
+  const getBreakTime = (value) => {
+    SetBreakTime(value);
   }
 
   return (
@@ -33,7 +41,7 @@ const Workouts = () => {
             <div className="col-lg-4 order-1 order-lg-2">
               <div className="mb-4 p-3 border text-white rounded">
                 <div className="d-flex align-items-center">
-                  <img className="me-4" src="./img/img.png" alt="img" />
+                  <img className="me-4 w-25" src={MyImg} alt="img" />
                   <div>
                     <h4>Saraur Alam</h4>
                     <span>
@@ -60,21 +68,21 @@ const Workouts = () => {
 
                 <h5 className=''>Add A Break</h5>
                 <div className='d-flex justify-content-between bg-secondary my-4 mb-5 p-2 rounded'>
-                  <p className='time'>10s</p>
-                  <p className='time'>20s</p>
-                  <p className='time'>30s</p>
-                  <p className='time'>40s</p>
-                  <p className='time'>50s</p>
+                  <button onClick={() => getBreakTime(10)} className='time'>10s</button>
+                  <button onClick={() => getBreakTime(20)} className='time'>20s</button>
+                  <button onClick={() => getBreakTime(30)} className='time'>30s</button>
+                  <button onClick={() => getBreakTime(40)} className='time'>40s</button>
+                  <button onClick={() => getBreakTime(50)} className='time'>50s</button>
                 </div>
 
                 <h5>Exercise Details</h5>
                 <div className='d-flex justify-content-between  p-2 mb-3 bg-secondary'>
                   <h6>Exercise time</h6>
-                  <p><span>0</span> seconds</p>
+                  <p><span>{time}</span> seconds</p>
                 </div>
                 <div className='d-flex justify-content-between  p-2 bg-secondary'>
                   <h6>Break time</h6>
-                  <p>10s seconds</p>
+                  <p><samp>{breakTime}</samp> seconds</p>
                 </div>
 
               </div>
