@@ -1,74 +1,65 @@
 [
   {
-    "id": "63346bbb5c7f03fbaf1f5c67",
-    "title": "30-Degree Lat Pulldown",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "1",
+    "title": "HTML5",
     "age": "20-30",
-    "duration": "60",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/11/Physically-Fit-Young-Man-Doing-A-Back-Workout-With-A-30-Degree-Lat-Pulldown-Exercise.jpg?w=1100&quality=86&strip=all"
+    "duration": "5",
+    "img": "https://ih1.redbubble.net/image.361593925.5453/hj,1000x-pad,1000x1000,f8f8f8.u2.jpg"
   },
   {
-    "id": "63346bbbdc2d636fb3ef18c7",
-    "title": "Diamond Pushups",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "2",
+    "title": "CSS3",
     "age": "25-30",
-    "duration": "45",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/12/Fit-Man-At-Home-Working-Out-His-Arms-With-A-Diamond-Pushup-Exercise.jpg?w=1100&quality=86&strip=all"
+    "duration": "6",
+    "img": "https://ih1.redbubble.net/image.2141066016.4666/hj,1000x-pad,1000x1000,f8f8f8.jpg"
   },
   {
-    "id": "63346bbb5bc5d124b4b220cb",
-    "title": "Dumbbell Lateral Raises",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "3",
+    "title": "Bootstrap",
+    "age": "",
+    "duration": "5",
+    "img": "https://ih1.redbubble.net/image.394851176.3397/pr,150x100,1000x-pad,1000x1000,f8f8f8.u2.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Tailwind",
+    "age": "25-30",
+    "duration": "6",
+    "img": "https://tailwindcss.com/_next/static/media/social-square.eab77323.jpg"
+  },
+  {
+    "id": "5",
+    "title": "javaScript",
     "age": "20-30",
-    "duration": "30",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/11/Muscular-Bodybuilder-Doing-Shoulder-Workouts-With-A-Dumbbell-Lateral-Raise-Exercise.jpg?w=1100&quality=86&strip=all"
+    "duration": "42",
+    "img": "https://ih1.redbubble.net/image.2887551946.7145/hj,1000x-pad,1000x1000,f8f8f8.jpg"
   },
   {
-    "id": "63346bbb73016763d22f0bf3",
-    "title": "Cable Crossover",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "6",
+    "title": "Reactjs",
     "age": "22-35",
-    "duration": "60",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/11/Muscular-Bodybuilder-Doing-Shoulder-Workouts-With-A-Dumbbell-Lateral-Raise-Exercise.jpg?w=1100&quality=86&strip=all"
+    "duration": "10",
+    "img": "https://ih1.redbubble.net/image.373612698.9613/papergc,300x,w,f8f8f8-pad,600x600,f8f8f8.u1.jpg"
   },
   {
-    "id": "63346bbb70f378ad39206b86",
-    "title": "Dumbbell Bench Press",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "7",
+    "title": "Node Js",
     "age": "20-30",
-    "duration": "45",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2020/03/Muscular-Male-In-Athletic-Gear-Performing-Dumbbell-Bench-Press-Exercise.jpg?w=1100&quality=86&strip=all"
+    "duration": "15",
+    "img": "https://ih1.redbubble.net/image.367014264.4385/hj,1000x-pad,1000x1000,f8f8f8.u4.jpg"
   },
   {
-    "id": "63346bbb460d04110cc2d117",
-    "title": "Leg Extension",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "8",
+    "title": "Firebase",
     "age": "25-30",
-    "duration": "100",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2019/11/Man-Workingout-His-Legs-WIth-Legs-Extension.jpg?w=1100&quality=86&strip=all"
+    "duration": "20",
+    "img": "https://ih1.redbubble.net/image.489553324.2202/hj,1000x-pad,1000x1000,f8f8f8.u4.jpg"
   },
   {
-    "id": "63346bbbe570188a94190cf4",
-    "title": "Barbell Ab Rollout",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
+    "id": "9",
+    "title": "mongoDB",
     "age": "20-30",
-    "duration": "60",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2019/11/1109-Ab-Rollout.jpg?w=1100&quality=86&strip=all"
-  },
-  {
-    "id": "63346bbb1114aa1eb73440e4",
-    "title": "Deadlift",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
-    "age": "28-35",
-    "duration": "60",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2019/05/Bodybuilder-Deadlifting-Heavy-Weight.jpg?w=1100&quality=86&strip=all"
-  },
-  {
-    "id": "63346bbb3c315d4bde663627",
-    "title": "T-Bar Row",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, rem itaque veniam iure laborum dolores alias ipsum modi rerum corporis.",
-    "age": "20-30",
-    "duration": "30",
-    "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/11/Musclar-Fitness-Model-Performing-A-T-Bar-Row-In-The-Gym.jpg?w=1100&quality=86&strip=all"
+    "duration": "35",
+    "img": "https://ih1.redbubble.net/image.352416462.2750/pr,150x100,1000x-pad,1000x1000,f8f8f8.u5.jpg"
   }
 ]

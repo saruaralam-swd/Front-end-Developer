@@ -53,14 +53,14 @@ const Workouts = () => {
   return (
     <div>
       <main>
-        <div className="container mt-4">
+        <div className="mt-4">
           <div className="row">
             <div className="col-lg-8 mb-4">
               <div className='d-flex mb-3'>
                 <img className='logo-custom me-3' src={logo} alt="logo" />
-                <h2 className='text-white'>Home Workout</h2>
+                <h2 className='text-white'>Front end Developer </h2>
               </div>
-              <p className='text-white'>Select today's exercise </p>
+              <p className='text-white'>Select today's learn topic</p>
               <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {
                   workouts.map(workout => <Workout addTime={addTime} key={workout.id} workout={workout}></Workout>)
@@ -73,10 +73,10 @@ const Workouts = () => {
                 <div className="d-flex align-items-center">
                   <img className="me-4 my-img" src={MyImg} alt="img" />
                   <div>
-                    <h4>Saraur Alam</h4>
+                    <h4>Md. Saraur Alam</h4>
                     <span>
                       <FontAwesomeIcon icon={faLocation} className="me-3"></FontAwesomeIcon>
-                      jamalput, Bangladesh
+                      jamalpur, Bangladesh
                     </span>
                   </div>
                 </div>
@@ -105,17 +105,17 @@ const Workouts = () => {
                   <button onClick={handleClick} className='time border'>50</button>
                 </div>
 
-                <h5>Exercise Details</h5>
+                <h5>Course Details</h5>
                 <div className='d-flex justify-content-between rounded bg-white text-black p-2 mb-3'>
-                  <h6>Exercise time</h6>
-                  <p><span>{time}</span> seconds</p>
+                  <h6>Course time</h6>
+                  <p><span>{time}</span> days</p>
                 </div>
                 <div className='d-flex justify-content-between rounded bg-white text-black p-2'>
                   <h6>Break time</h6>
-                  <p><samp>{buttonText ? buttonText : 0}</samp> seconds</p>
+                  <p><samp>{buttonText ? buttonText : 0}</samp> minute</p>
                 </div>
 
-                <button onClick={notify} className="mt-4 w-100 btn btn-primary">Click</button>
+                <button onClick={notify} className="mt-4 w-100 btn btn-primary">course complete</button>
                 <ToastContainer />
 
               </div>
