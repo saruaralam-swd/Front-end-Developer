@@ -4,15 +4,20 @@ import Workout from '../Workout/Workout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import MyImg from '../../images/img.png'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Workouts = () => {
   const [workouts, SetWorkouts] = useState([]);
+
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => SetWorkouts(data));
   }, []);
 
+  
+  // add to list handler
   let [time, SetTime] = useState(0)
   const addTime = (workout) => {
     const duration = parseInt(workout.duration);
@@ -20,17 +25,37 @@ const Workouts = () => {
     SetTime(time);
   }
 
-  const [buttonText, setButtonText] = useState('0');  
+  // getTime form local storage
+  const getItem = localStorage.getItem('time');
+
+  const [buttonText, setButtonText] = useState(getItem);
+
+  // add to break time handler
   function handleClick(e) {
-    setButtonText(e.target.textContent);
+    const second = e.target.textContent;
+    localStorage.setItem('time', second);
+
+    setButtonText(second);
   }
+
+  // toastify 
+  const notify = () => toast.success('Congratulation!', {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
 
   return (
     <div>
       <main>
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 pt-5 order-2 order-lg-1">
+            <div className="col-lg-8 pt-5">
+
               <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {
                   workouts.map(workout => <Workout addTime={addTime} key={workout.id} workout={workout}></Workout>)
@@ -38,7 +63,7 @@ const Workouts = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 order-1 order-lg-2 sticky-lg-top">
+            <div className="col-lg-4 ">
               <div className="mb-4 p-3 border text-white rounded">
                 <div className="d-flex align-items-center">
                   <img className="me-4 my-img" src={MyImg} alt="img" />
@@ -84,6 +109,9 @@ const Workouts = () => {
                   <h6>Break time</h6>
                   <p><samp>{buttonText}</samp> seconds</p>
                 </div>
+
+                <button onClick={notify} className="mt-4 w-100 btn btn-primary">Click</button>
+                <ToastContainer />
 
               </div>
             </div>
