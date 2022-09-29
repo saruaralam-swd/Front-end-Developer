@@ -112,7 +112,7 @@ const Workouts = () => {
                 </div>
                 <div className='d-flex justify-content-between rounded bg-white text-black p-2'>
                   <h6>Break time</h6>
-                  <p><samp>{buttonText}</samp> seconds</p>
+                  <p><samp>{buttonText ? buttonText : 0}</samp> seconds</p>
                 </div>
 
                 <button onClick={notify} className="mt-4 w-100 btn btn-primary">Click</button>

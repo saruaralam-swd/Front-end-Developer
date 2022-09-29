@@ -10,9 +10,9 @@ const Workout = ({addTime, workout}) => {
         <img src={img} alt="img" />
         <div className="card-body">
           <h6 className="card-text">{title}</h6>
-          <p className="text-muted">{body.slice(0, 40) + '...'}</p>
-          <p className='card-text'>For age {age}</p>
-          <p className='card-text'>Time required {duration}s</p>
+          {/* <p className="card-text">{body.slice(0, 40) + '...'}</p> */}
+          <p className='card-text'>For age <b>{age}</b></p>
+          <p className='card-text'>Time required <b>{duration}s</b></p>
           <button onClick={() => addTime(workout)} className="custom-btn">Add to List</button>
         </div>
       </div>
