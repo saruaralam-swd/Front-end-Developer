@@ -6,6 +6,7 @@ import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import MyImg from '../../images/img.png'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from '../../images/logo.png';
 
 const Workouts = () => {
   const [workouts, SetWorkouts] = useState([]);
@@ -16,7 +17,7 @@ const Workouts = () => {
       .then(data => SetWorkouts(data));
   }, []);
 
-  
+
   // add to list handler
   let [time, SetTime] = useState(0)
   const addTime = (workout) => {
@@ -52,10 +53,14 @@ const Workouts = () => {
   return (
     <div>
       <main>
-        <div className="container">
+        <div className="container mt-4">
           <div className="row">
-            <div className="col-lg-8 pt-5">
-
+            <div className="col-lg-8 mb-4">
+              <div className='d-flex mb-3'>
+                <img className='logo-custom me-3' src={logo} alt="logo" />
+                <h2 className='text-white'>Home Workout</h2>
+              </div>
+              <p className='text-white'>Select today's exercise </p>
               <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
                 {
                   workouts.map(workout => <Workout addTime={addTime} key={workout.id} workout={workout}></Workout>)
@@ -63,7 +68,7 @@ const Workouts = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 ">
+            <div className="col-lg-4">
               <div className="mb-4 p-3 border text-white rounded">
                 <div className="d-flex align-items-center">
                   <img className="me-4 my-img" src={MyImg} alt="img" />
