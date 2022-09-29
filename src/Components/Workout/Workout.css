@@ -1,0 +1,12 @@
+.card-body p{
+  margin: 5px 0px;
+}
+
+.custom-btn{
+  background-color: #020F2A;
+  width: 100%;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}

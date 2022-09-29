@@ -9,20 +9,20 @@ const Workouts = () => {
   const [workouts, SetWorkouts] = useState([]);
   useEffect(() => {
     fetch('data.json')
-    .then(res => res.json())
-    .then(data => SetWorkouts(data));
+      .then(res => res.json())
+      .then(data => SetWorkouts(data));
   }, []);
-  
+
   let [time, SetTime] = useState(0)
   const addTime = (workout) => {
-    const duration = parseInt( workout.duration);
+    const duration = parseInt(workout.duration);
     time = duration + time;
     SetTime(time);
   }
 
-  const [breakTime, SetBreakTime] = useState(0)
-  const getBreakTime = (value) => {
-    SetBreakTime(value);
+  const [buttonText, setButtonText] = useState('0');  
+  function handleClick(e) {
+    setButtonText(e.target.textContent);
   }
 
   return (
@@ -38,10 +38,10 @@ const Workouts = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 order-1 order-lg-2">
+            <div className="col-lg-4 order-1 order-lg-2 sticky-lg-top">
               <div className="mb-4 p-3 border text-white rounded">
                 <div className="d-flex align-items-center">
-                  <img className="me-4 w-25" src={MyImg} alt="img" />
+                  <img className="me-4 my-img" src={MyImg} alt="img" />
                   <div>
                     <h4>Saraur Alam</h4>
                     <span>
@@ -51,7 +51,7 @@ const Workouts = () => {
                   </div>
                 </div>
 
-                <div className='d-flex justify-content-between bg-secondary my-4 p-2 rounded'>
+                <div className='d-flex justify-content-between bg-white text-black my-4 p-2 rounded'>
                   <div>
                     <p className='m-0 fw-bold'>62kg</p>
                     <p className='m-0'>Weight</p>
@@ -61,28 +61,28 @@ const Workouts = () => {
                     <p className='m-0'>Height</p>
                   </div>
                   <div>
-                    <p className='m-0 fw-bold'>29yrs</p>
+                    <p className='m-0 fw-bold'>20yrs</p>
                     <p className='m-0'>Age</p>
                   </div>
                 </div>
 
                 <h5 className=''>Add A Break</h5>
-                <div className='d-flex justify-content-between bg-secondary my-4 mb-5 p-2 rounded'>
-                  <button onClick={() => getBreakTime(10)} className='time'>10s</button>
-                  <button onClick={() => getBreakTime(20)} className='time'>20s</button>
-                  <button onClick={() => getBreakTime(30)} className='time'>30s</button>
-                  <button onClick={() => getBreakTime(40)} className='time'>40s</button>
-                  <button onClick={() => getBreakTime(50)} className='time'>50s</button>
+                <div className='d-flex justify-content-between bg-white text-black my-4 mb-5 p-2 rounded'>
+                  <button onClick={handleClick} className='time border'>10</button>
+                  <button onClick={handleClick} className='time border'>20</button>
+                  <button onClick={handleClick} className='time border'>30</button>
+                  <button onClick={handleClick} className='time border'>40</button>
+                  <button onClick={handleClick} className='time border'>50</button>
                 </div>
 
                 <h5>Exercise Details</h5>
-                <div className='d-flex justify-content-between  p-2 mb-3 bg-secondary'>
+                <div className='d-flex justify-content-between rounded bg-white text-black p-2 mb-3'>
                   <h6>Exercise time</h6>
                   <p><span>{time}</span> seconds</p>
                 </div>
-                <div className='d-flex justify-content-between  p-2 bg-secondary'>
+                <div className='d-flex justify-content-between rounded bg-white text-black p-2'>
                   <h6>Break time</h6>
-                  <p><samp>{breakTime}</samp> seconds</p>
+                  <p><samp>{buttonText}</samp> seconds</p>
                 </div>
 
               </div>

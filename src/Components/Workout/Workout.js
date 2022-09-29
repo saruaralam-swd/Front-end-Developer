@@ -1,4 +1,5 @@
 import React from 'react';
+import './Workout.css'
 
 const Workout = ({addTime, workout}) => {
   const {img, title, body, age, duration} = workout;
@@ -12,7 +13,7 @@ const Workout = ({addTime, workout}) => {
           <p className="text-muted">{body.slice(0, 40) + '...'}</p>
           <p className='card-text'>For age {age}</p>
           <p className='card-text'>Time required {duration}s</p>
-          <button onClick={() => addTime(workout)} className="btn btn-primary w-100">SELECT</button>
+          <button onClick={() => addTime(workout)} className="custom-btn">Add to List</button>
         </div>
       </div>
     </div>
