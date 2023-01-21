@@ -58,7 +58,7 @@ const Workouts = () => {
             <div className="col-lg-8 mb-4">
               <div className='d-flex mb-3'>
                 <img className='logo-custom me-3' src={logo} alt="logo" />
-                <h2 className='text-white'>Front end Developer </h2>
+                <h2 className='text-white'>Front end Developer</h2>
               </div>
               <p className='text-white'>Select today's learn topic</p>
               <div className="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
